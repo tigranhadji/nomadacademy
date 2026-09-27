@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="icon-color" transform="translate(7.000000, 8.000000)" stroke="#DD8C11" stroke-width="4">
+            <line x1="15.05" y1="10" x2="15.05" y2="19" id="Path"></line>
+            <line x1="23" y1="24" x2="15" y2="19" id="Path"></line>
+            <polyline id="Path" points="28 12 36 12 36 4"></polyline>
+            <path d="M29.3568803,29.0155568 C24.4405476,33.8802568 17.0440196,35.3372052 10.6173555,32.7068185 C4.19069152,30.0764319 0,23.8769191 0,17 C0,10.1230809 4.19069152,3.92356814 10.6173555,1.29318147 C17.0440196,-1.33720519 24.4405476,0.119743218 29.3568803,4.98444321 L36,11.5331148" id="Path"></path>
+        </g>
+    </g>
+</svg>

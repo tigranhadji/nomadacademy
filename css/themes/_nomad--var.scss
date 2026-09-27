@@ -1,0 +1,398 @@
+/*------------------------------------
+THEMES : 2PULSE
+--------------------------------------*/
+//---------DEFAULT ------------------
+$tc-default: unset;
+
+//----------- COULEURS --------------
+$c-darkteal              : #263A40;
+$c-teal               : #116466;
+$c-black              : #000;
+$c-white         : #FDFFFC;
+$c-strongteal              : #456863;
+$c-fond: #000;
+$c-orange : #DD8C11;
+//--------- THEME DE COULEURS ----------
+$tc-primary           :$c-darkteal;
+$tc-secondary         :$c-black;
+$tc-foreground        : #000;
+$tc-background        : $c-darkteal;
+
+
+
+//---------- FONTS -------------
+$tf-family: 'Poppins';
+$tf-family--alt: 'Arial';
+
+
+// --------- HEADER -------------
+
+// couleur Lien
+$tc-menu: #DEF1EC;
+$tf-menu: $fz-25;
+
+
+// logo background
+$ti-logo: "../assets/appicons/favicon.svg";
+
+
+// ------------ INPUTS ----------
+
+//colors
+$tc-input-bg  : $tc-default;
+$tc-input-c   : $tc-default;
+
+// padding
+$tp-input : spacer(5)+px spacer(3)+px spacer(4)+px   spacer(6)+px;
+
+$tp-input--t : spacer(5)+px;
+
+// margin
+$tm-input: 0 0 0 0;
+
+//placeholder
+$tc-placeholder: $c-darkteal;
+
+//label
+$tc-label: $tc-default;
+
+//sizes
+$ts-input--h: 48px;
+$ts-input--w: 400px;
+
+//border radius
+$tbr-input: 5px;
+$tbr-input-hover : 100%;
+
+//box SHADOWS
+$tshad-input: $tc-default;
+
+//borders
+$tbc-input: none;
+
+//background
+$tbg-input: $c-white;
+
+//status
+$tc-disabled: $c-white;
+
+
+//------------ Dropdown ----------
+
+//colors
+$tc-dropdown: $c-darkteal;
+$tbg-dropdown: $c-black;
+
+//---------- Checkbox & Radio ---------
+
+//border
+$tbc-checkbox: $c-noir;
+
+// backgorund
+$tbg-radio: $c-noir;
+
+
+//color
+$tbc-checkbox: $c-noir;
+
+$tbg-radio: $c-noir;
+
+
+//icon Checkbox
+
+$t-icon-check-c:orange;
+$t-icon-check-w:13px;
+
+//----------- Error msg --------
+
+//colors
+$tbg-error: $tc-default;
+$tc-error-c: $c-white;
+
+// padding
+$tp-error: 0 spacer(3)+px 0 spacer(3)+px;
+
+//border-radius
+$tbr-error: $tc-default;
+
+//sizes
+$ts-error--h: $tc-default;
+$ts-error--w: $tc-default;
+
+//borders
+$tbc-error: $tc-default;
+
+
+//------------ BUTTONS ------------
+
+//sizes
+$ts-btn--h: 70px;
+$ts-btn--w: $tc-default;
+
+//fonts
+$tfw-btn: 600;
+$tfs-btn: 22px;
+
+//icons
+$ts-icon--h: 20px;
+$ts-icon--w: 20px;
+
+$ts-icon--h-large: 28px;
+$ts-icon--w-large:  28px;
+
+//colors
+$tbg-btn     : $c-black;
+$tc-btn-c      : $c-white;
+$tbg-btn-inverted: $tc-secondary;
+$tbg-btn--secondary: $tc-default;
+$tc-btn--secondary: $c-black;
+
+//padding
+$tp-btn-l : spacer(8)+px spacer(5)+px spacer(6)+px spacer(5)+px;
+$tp-btn-r: spacer(5)+px spacer(7)+px;
+
+//border-radius
+$tbr-btn: $tc-default;
+$tbr-btn-rounded: 50px;
+
+//margin
+$tm-btn: $tc-default;
+
+//status
+
+//box-shadow
+$tshad-btn: $tc-default;
+
+//borders
+$tbc-btn: 5px solid $c-white;
+
+
+//------------ SLIDERS ---------------
+
+//------------ NAVIGATION ------------
+
+//gap
+
+$tm-navgap--x: 10px;
+$tm-navgap--y: 10px;
+$th-navicon: 30px;
+$tw-navicon: 30px;
+
+
+// ------------ QUOTES ------------
+
+
+//margin
+$tm-cite: spacer(4)+px 0 0 0;
+
+//padding
+$tp-blockquote: 0 spacer(6)+px;
+
+// Image des parenthèses
+$ti-quotes: "../assets/imgs/quote.svg";
+
+
+
+//---------- TEXTLIST ------------
+
+//margin
+$tm-textlist: 15px;
+
+
+
+//-----------CUSTOM COLORS
+
+$tc-text              :black;
+$tc-text--inverse     :white;
+$tc-error             :white;
+$tc-btn               :violet;
+$tc-hover-c           :$c-rouge;
+
+
+
+
+// ---------- IMAGES ----------
+
+//Select arrows
+$ti-select--arrow: "data:image/svg+xml;charset=utf8,%3Csvg width='23px' height='13px' viewBox='0 0 23 13' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='%231E1F22' stroke-width='3' fill='none' fill-rule='evenodd'%3E%3Cpolyline points='1 1 11.5 11 22 1'%3E%3C/polyline%3E%3C/g%3E%3C/svg%3E";
+
+
+//Before input valid
+$ti-beforeInputV: "../assets/icons/sprite.svg#close_black";
+
+//Before input invalid
+$ti-beforeInputNV: "../assets/icons/sprite.svg#check_black";
+
+
+// SCROLLBAR
+
+@mixin no-scrollbar{
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar{display: none;}
+}
+
+//-------- FONTS STYLES -------------
+
+.tf-input{
+  font-family: $tf-family;
+  font-size: $fz-1;
+  font-weight: 700;
+  color: #000;}
+
+.tf-error{
+  font-size: $fz-1;}
+
+.tf-input--label{
+  font-size: $fz-1;}
+
+.tf-input--active{
+  text-align: center;
+  font-size: $fz-3;
+  font-family: $tf-family;}
+
+.tf-quote{
+  color: $c-white;
+  font-weight: 800;
+  line-height: 1em;
+  font-size: $fz-45;
+  font-family: Public Sans, sans-serif;
+}
+
+.tf-quote--cite{
+  font-weight: 200;
+  font-family: Public Sans, sans-serif;
+  font-size: $fz-25;
+  color: $c-white;
+  text-align: end;
+  line-height: 1em;
+  strong{display: block;
+  font-weight: 200;}
+}
+
+.tf-nav--title{
+  color: blue;
+  font-size: 30px;}
+
+.tf-nav--item{
+    text-decoration: none;
+    color: red;}
+
+.tf-card--title{
+  color: $c-white;
+  font-size: $fz-25;
+  font-weight: 700;
+  font-family: Public Sans, sans-serif;
+}
+
+.tf-card--text{
+  color: #000;
+  font-size: $fz-2;
+  font-weight: 400;
+  font-family: Public Sans, sans-serif;
+}
+
+.tf-menu{
+  color: $c-white;
+  font-size: $fz-25;
+  font-family: Public Sans, sans-serif;
+  font-weight: 400;
+}
+
+
+.tf-textfooter{
+  font-size: $fz-2;
+  font-family: Public Sans, sans-serif;
+  color: $c-white;
+  font-weight: 400;
+}
+
+
+//-----------------------
+
+
+.tf-title-banner{
+  font-size: clamp(2.13rem, calc(0.65rem + 4.91vw), 5.56rem);
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+.tf-title-banner_2{
+  font-size: clamp(1.31rem, calc(0.64rem + 2.23vw), 2.88rem);
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+.tf-menu{
+  font-size: clamp(0.88rem, calc(0.61rem + 0.89vw), 1.50rem);
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  line-height: 1em;
+}
+
+.tf-formation-li-text{
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.88rem, calc(0.61rem + 0.89vw), 1.50rem);
+  color: $c-white;
+}
+
+.tf-card--title{
+  font-size: clamp(1.50rem, calc(0.67rem + 2.77vw), 3.44rem);
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+}
+
+.tf-card--small{
+  font-size: clamp(0.75rem, calc(0.59rem + 0.54vw), 1.13rem);
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+
+.tf-presentation-text{
+  font-family: Poppins,sans-serif;
+  font-size: clamp(1.13rem, calc(1.04rem + 0.27vw), 1.31rem);
+  font-weight: 400;
+}
+
+.tf-control-span{
+  font-family: Poppins, sans-serif;
+  font-size: clamp(0.63rem, calc(-0.02rem + 2.14vw), 2.13rem);
+  font-weight: 400;
+}
+
+.tf-title-card-2{
+  font-family: Poppins, sans-serif;
+  font-size: clamp(0.81rem, calc(-0.31rem + 3.75vw), 3.44rem);
+  font-weight: 600;
+}
+
+.tf-title-formation-page{
+  font-size: clamp(1.50rem, calc(0.86rem + 2.14vw), 3.00rem);
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+}
+
+.tf-label-faq{
+  font-size: clamp(1.25rem, calc(1.04rem + 0.71vw), 1.75rem);
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+
+.tf-artiste--title{
+  font-size: clamp(1.25rem, calc(0.31rem + 3.13vw), 3.44rem);
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+}
+
+
+.tf-slide-formation{
+  font-size: clamp(1.00rem, calc(0.87rem + 0.45vw), 1.31rem);
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}

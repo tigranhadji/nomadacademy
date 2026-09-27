@@ -1,0 +1,51 @@
+.c-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: spacer(8)+px;
+
+  ul{
+    list-style-type: none;
+    a{
+      color: $tc-foreground;
+      text-decoration: none;}
+  }
+
+  small{
+    // color:;
+    // font-size: ;
+    // font-weight:;
+    display: block;
+    margin-top: spacer(6)+px;
+  }
+
+  &.c-footer--middle{
+
+    ul{
+      width: calc(100% / 3);
+      text-align: end;
+      li a{
+        @extend .tf-textfooter;
+      }
+    }
+    .text{
+      width: calc(100% / 3);
+      p,small{
+        @extend .tf-textfooter;
+      }
+      p{width: 50%;};
+    }
+    figure{
+      width: 10%;
+      img{width: 100%;}
+
+      figcaption{
+        text-align: center;
+        margin-top: spacer(5)+px;
+        color: $tc-foreground;
+        font-family: Public Sans;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="9025316_car_icon" transform="translate(3.000000, 8.000000)" stroke="#FDFFFC" stroke-width="4">
+            <line x1="0" y1="15" x2="45" y2="15" id="Path"></line>
+            <path d="M42,28 L42,32.5 C42,33.3284271 41.2836556,34 40.4,34 L35.6,34 C34.7163444,34 34,33.3284271 34,32.5 L34,28" id="Path"></path>
+            <path d="M11,28 L11,32.5 C11,33.3284271 10.2836556,34 9.4,34 L4.6,34 C3.7163444,34 3,33.3284271 3,32.5 L3,28" id="Path"></path>
+            <line x1="10" y1="21" x2="13" y2="21" id="Path"></line>
+            <line x1="32" y1="21" x2="35" y2="21" id="Path"></line>
+            <path d="M42,14.8235294 L35.9265625,0.988235294 C35.6690591,0.390197208 35.0875164,0.00262222003 34.44375,0 L10.55625,0 C9.91248364,0.00262222003 9.33094092,0.390197208 9.0734375,0.988235294 L3,14.8235294 L3,28 L42,28 L42,14.8235294 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

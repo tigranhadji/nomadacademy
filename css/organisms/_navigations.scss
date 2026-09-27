@@ -1,0 +1,27 @@
+/* Navigation Steps */
+
+.c-navigation{
+  display:inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $tm-navgap--y;
+
+  h3{@extend .tf-nav--title;}
+
+  li{
+    display: flex;
+    align-items: center;
+    gap: $tm-navgap--x;
+
+    a{@extend .tf-nav--item;}
+
+    i{
+      display: inline-block;
+      height: $th-navicon;
+      width: $tw-navicon;}
+  }
+
+  &.c-navigation--invert{
+    li{flex-direction: row-reverse;}
+  }
+}

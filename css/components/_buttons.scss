@@ -1,0 +1,88 @@
+/*----------------------------
+COMPONENTS : BOUTONS
+~ Tout type de bouton Patrivia
+------------------------------*/
+
+//Liens simples
+
+.c-link{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $tc-default;
+  color : #9FEDD7;
+  border: 0;
+  margin-top: spacer(4)+px;
+  font-size: $fz-15;
+  font-weight: 400;
+  text-decoration: none;
+
+}
+
+//Base pour tous les boutons
+
+.c-btn{
+  display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: $tfw-btn;
+	gap: .6em;
+  text-align: center;
+	background-color: $tbg-btn;
+  color: $tc-btn-c;
+	padding:  $tp-btn-r;
+	height: $ts-btn--h;
+  width: $ts-btn--w;
+	transition: all 0.2s ease-in;
+	border: $tbc-btn;
+	font-size: $tfs-btn;
+  text-decoration: none;
+
+
+	//Maintenir curseur pour tous les elms.
+	&:hover{cursor: pointer;}
+
+  //Change la couleur du focus
+  &:focus,
+  &:focus-visible{
+    -webkit-tap-highlight-color: transparent;
+    outline: darken($tbg-btn, 10%) 1px solid;
+  }
+}
+
+
+.c-btn--regular{
+
+  //Icones via sprite SVG
+  //(dans -- variables.scss)
+  i{
+    display: inline-block;
+    width: $ts-icon--w;
+    height: $ts-icon--h;
+    background-position: center;}
+
+  &.c-btn--large i{
+    width: $ts-icon--w-large;
+    height: $ts-icon--h-large;}
+
+  &.c-btn--inverted{
+    &:hover{
+      background-color: $tbg-btn-inverted;
+    }
+  }
+
+  &.c-btn--large{
+    padding: $tp-btn-l;
+  }
+
+  &.c-btn--secondary{
+    background-color: $tbg-btn--secondary;
+    color: $tc-btn--secondary;
+  }
+
+  &.c-btn--rounded{
+    border-radius: $tbr-btn-rounded;
+  }
+
+}

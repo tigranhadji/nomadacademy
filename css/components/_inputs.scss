@@ -1,0 +1,400 @@
+/*----------------------------
+COMPONENTS : INPUTS
+~ Tout type d'inputs 2pulse
+------------------------------*/
+
+//Base pour tous les inputs
+
+.c-input{
+  // width: 100%;
+
+  //Inputs
+  input,select,textarea{
+    width: $ts-input--w;
+    height: $ts-input--h;
+    border-radius: $tbr-input;
+    box-shadow: $tshad-input;
+    background-color: $tbg-input;
+    @extend .tf-input;
+    padding: spacer(5)+px spacer(5)+px;}
+
+  label{
+    color: $tc-label;
+    @extend .tf-input--label;}
+
+  ::placeholder{
+    color: $tc-placeholder;
+  }
+
+  //Message d'erreur
+  i{
+    @extend .tf-error;
+    position: absolute;
+    display: inline-block;
+    color: $tc-error-c;
+    background-color: $tbg-error;
+    border-radius: $tbr-error;
+    height: $ts-error--h;
+    width: $ts-error--w;
+    border: $tbc-error;
+    border-radius: $tbr-error;
+    padding: $tp-error;
+    top: 0;}
+
+  // N'importe quel input est focus
+  &[class^="c"]:focus-within{
+    &:before{opacity: 1;}
+    outline: 0;
+    border-color: $tbc-input;
+    background-color: $tbg-input;;
+
+  }
+
+  // N'importe quel input est hover
+  &[class^="c"]:hover{
+    &:before{
+      background-color: black;
+      border-radius: $tbr-input-hover;
+    }
+  }
+
+  // Input est invalid
+  &.c-input--invalid{
+
+    padding-top: $tp-input--t;
+
+    label{
+      top: calc(4px + $tp-input--t);
+    }
+
+    &:before{
+      @extend .c-input--status;
+      background-image: url($ti-beforeInputV);}
+  }
+
+  // Input est valid
+  &.c-input--valid{
+    &:before{
+      @extend .c-input--status;
+      background-image: url($ti-beforeInputNV);}
+  }
+}
+
+.c-input--radio,
+.c-input--check{
+
+	label{
+		position: relative;
+		width: 100%;
+		display: inline-flex;
+		height: 21px;
+		align-items:center;
+		padding-left: calc(21px + #{spacer(4)+px});
+		transition: color 0.13s ease-in;
+
+		&:before,
+		&:after{
+			content: " ";
+			position: absolute;}
+
+		//Contour Radio et Checkbox
+		&:before{
+			left: 0;
+			top: 0;
+			width: 21px;
+			height: 21px;
+			border: 2px solid $tbc-checkbox;
+			transition: border-color 0.21s cubic-bezier(.3, .7, .4, 1);}
+
+		&:after{
+			top: 4px;
+			left: 4px;
+			width: calc(21px - 8px);
+			height: calc(21px - 8px);
+			transform: scale(0.5);
+			transition: transform 0.21s cubic-bezier(.3, .7, .4, 1);}
+
+		&:hover,
+		&:focus,
+		&:focus-within{
+			color: $tbc-checkbox;
+			cursor: pointer;}
+	}
+
+	input{
+		display: none;
+
+		&:hover + label:before,
+		&:focus + label:before,
+		&:focus-within + label:before,
+		&:checked + label:before{
+			border-color: $tbc-checkbox;}
+
+		&:checked + label{
+			color: $tbc-checkbox;}
+
+		&:checked + label:after{
+			transform: scale(1);}
+	}
+}
+
+
+// Icon de statu des inputs
+.c-input--status{
+  content: ' ';
+  position: absolute;
+  display: block;
+  width: 34px;
+  height: 34px;
+  opacity: .2;
+  margin-left: -40px;
+  top: 50%;
+  margin-top: -17px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;}
+
+//Input radio
+.c-input--radio{
+  label:before,
+	label:after{
+		border-radius: 100%;}
+
+	input:checked + label:after{
+		background-color: $tbg-radio;}
+}
+
+//Checkbox
+.c-input--check{
+  label:before,
+  label:after{
+    border-radius: 2px;}
+
+  input:checked + label:after{
+    @include icon(check,$t-icon-check-c,$t-icon-check-w);}
+}
+
+
+// TOGGLES
+
+.c-input--toggle{
+  input{
+	height: 0;
+	width: 0;
+	visibility: hidden;}
+
+  label{
+  	cursor: pointer;
+  	text-indent: -9999px;
+  	width: 100px;
+  	height: 60px;
+  	background: $tc-primary;
+  	display: block;
+  	border-radius: 100px;
+  	position: relative;}
+
+  label:after {
+  	content: '';
+  	position: absolute;
+  	top: 5px;
+  	left: 5px;
+  	width: 50px;
+  	height: 50px;
+  	background: #fff;
+  	border-radius: 90px;
+  	transition: 0.3s;}
+
+  input:checked + label {
+      background-color: $tc-secondary;}
+
+  input:checked + label:after {
+  	left: calc(100% - 5px);
+  	transform: translateX(-100%);}
+
+  label:active:after{
+  	width: 70px;}
+}
+
+
+//Dropdown
+
+.c-input--dropdown{
+  z-index: 4;
+
+  .c-input--dropdown_holder{
+    margin-top: 8px;
+    z-index: 100;
+
+    .c-input--dropdown_selector{
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      background-image: url($ti-select--arrow);
+      background-repeat: no-repeat;
+  		background-position: right spacer(5)+px top 50%;
+  		background-size: 1.25em auto;
+      padding: 0 13px;
+      border: 0;
+      outline: none;
+      color: inherit;
+      background-color: $tbg-dropdown;
+      z-index: 2;
+      height: 59px;}
+
+    .c-input--dropdown_list{
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: $tbg-dropdown;
+      height: 0;
+      overflow: hidden;
+      transition: all .25 ease-out;
+      list-style-type: none;
+
+      &.dropdown-display--bottom{
+        top: unset;
+        bottom: 100%;
+        transform: translateY(21px);}
+
+      li{
+        flex-shrink: 0;
+        height: 59px;
+        display: flex;
+        padding: 0 13px;
+        align-items: center;
+        color: $tc-dropdown;
+        background-color: inherit;
+        transition: all .25 ease-in-out;
+
+        &:hover,
+        &.active{
+          cursor: pointer;
+          background-color: $tc-dropdown;
+          color: #fff;
+          border-radius: 0;}
+
+        &:hover{
+          padding-left: spacer(5)+px;}
+
+        &:active{
+          border-radius: 0;
+          border-top: 1px solid rgba($c-brun,0.89);
+          border-bottom: 1px solid rgba($c-brun,0.89);}
+      }
+    }
+
+  }
+
+ // Affichage du dropdown
+  &:hover .c-input--dropdown_list{
+		height: auto;
+		max-height: calc(59px * 4); //scroll au delà de 4 elmts.
+		transform: translateY(0);
+		overflow-y: scroll;}
+}
+
+
+//Dropdown avec un icons
+.c-input--dropdown_icon{
+
+  .c-input--dropdown_holder{
+
+    .c-input--dropdown_list{
+
+      li{justify-content:center;}
+
+      li:before{
+        content: " ";
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../assets/icons/sprite.svg#close_white);
+        background-size: 100%;}
+    }
+  }
+}
+
+
+// select
+
+.c-input--select{
+  select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url($ti-select--arrow);
+    background-repeat: no-repeat;
+    background-position: right spacer(5)+px top 50%;
+    background-size: 1.25em auto;}
+}
+
+
+// Base pour tous les inputs regulars
+.c-input--regular{
+  input{
+    padding: $tp-input}
+  }
+
+//input avec Label à l'intérieur
+.c-input--labelin{
+
+  label{
+    z-index: 2;
+    position: absolute;
+    pointer-events: none;
+    top: 4px;
+    opacity: 1;
+    display: flex;
+    height: 59px;
+    align-items: center;
+    padding-left: 13px;
+    transition: all 0.25s ease-out;}
+
+  input:not(:placeholder-shown) + label{
+    opacity: 0.55;
+    transform: translate(3px, -8px) scale(0.8);
+    transform-origin: 0 0;}
+}
+
+// Label en dehors du champ
+.c-input--labelout{
+  label{
+    height: 30px;
+    padding: 0;
+    position: relative;
+    display: block;}
+}
+
+//input avec une bordure
+.c-input--border{
+  input{
+    border:none;
+    padding-top: 13px;
+    border-bottom: 1px solid black;}
+}
+
+//input sans icon de status
+.c-input--nostatus{
+  &:before{display: none;}
+}
+
+//Message erreur à gauche
+.c-input--error_l{
+  i{left: 0;}
+}
+
+.c-input--error_r{
+  i{right: 0;}
+}
+
+//input desactivé
+.c-input--disabled{
+  pointer-events: none;
+
+  input,textarea,select{
+  background-color: $tc-disabled;}
+}

@@ -1,0 +1,81 @@
+/*----------------------------
+TEMPLATES : FRONT
+~ Ensemble header / contenu / footer du front
+------------------------------*/
+
+.t-front{
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	padding-top: spacer(6)+px;
+
+	//Largeur maximale du container
+	//Utilisée pour calculer le padding
+	--maxframe: #{spacer(14)+px};
+
+	padding-left: clamp(
+		#{spacer(8)+px},
+		calc((100vw - var(--maxframe)) / 2),
+		calc((100vw - var(--maxframe)) / 2));
+	padding-right: clamp(
+		#{spacer(8)+px},
+		calc((100vw - var(--maxframe)) / 2),
+		calc((100vw - var(--maxframe)) / 2));
+
+	.l-header{margin-bottom: spacer(8)+px;}
+
+	.l-header ~ *{margin-bottom: spacer(8)+px;}
+
+	.l-footer{
+		margin-top: spacer(8)+px;
+		margin-bottom: spacer(9)+px;
+		align-self: flex-end;}
+
+
+	.suggest{
+		margin-top: spacer(5)+px;
+		width: 100%;
+		span{
+			color: $c-orange;
+
+			b{
+				font-weight: 600;
+				display: block;}
+		}
+	}
+
+	.sous-titre{
+		display: flex;
+		gap: 20px;
+
+		a{
+			height: 40px;
+			background-image: none;
+		}
+	}
+
+
+	@media screen and (max-width: $rb-xl){
+		padding: spacer(6)+px spacer(7)+px 0;
+	}
+
+	@media screen and (max-width: $rb-md){
+
+		.l-header{margin-bottom: spacer(7)+px;}
+
+		.l-footer{margin-top: 0;}
+
+		.sous-titre{
+			justify-content: center;
+		}
+	}
+
+	@media screen and (max-width: $rb-sm){
+		padding: spacer(5)+px spacer(6)+px 0;
+	}
+
+	@media screen and (max-width: $rb-xs){
+		padding: spacer(5)+px spacer(5)+px 0;
+	}
+
+}

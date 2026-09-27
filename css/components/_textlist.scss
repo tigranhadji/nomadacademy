@@ -1,0 +1,24 @@
+// ----------------------------
+// ORGANISMS : textlist
+//
+// ----------------------------
+
+.c-textlist{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $tm-textlist;
+  i{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+  }
+  li{
+    color: $tc-foreground;
+  }
+
+  &.c-textlist--condensed{
+    gap: 0;
+  }
+}

@@ -1,0 +1,44 @@
+/*----------------------------
+LAYOUTS : MODALS
+~ Modales
+------------------------------*/
+
+.c-modal{
+  max-width: 720px;
+  height: 700px;
+  background-color: $tc-text--inverse;
+  max-height: 80%;
+  padding: 40px 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+
+  > button{
+    border: none;
+    background-color: unset;
+    position: absolute;
+    right: 50px;
+  }
+
+  .c-modal--text{
+    margin-top: 60px;
+    h2{text-align: center}
+    p{text-align: justify;}
+  }
+
+  &.c-modal--regular{
+    .c-modal--text{
+      p{margin: 50px 0;}
+    }
+  }
+
+  &.c-modal--condensed{
+    .c-modal--text{
+      margin-top: 30px;
+      p{margin: 30px 0;}
+    }
+  }
+
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="9025492_fork_knife_icon" transform="translate(5.000000, 0.000000)" stroke="#FDFFFC" stroke-width="4">
+            <line x1="10" y1="0" x2="10" y2="11" id="Path"></line>
+            <line x1="10" y1="22" x2="10" y2="50" id="Path"></line>
+            <path d="M16,0 L18,12 C18,16.9705628 13.9705627,21 9,21 C4.0294373,21 0,16.9705628 0,12 L2,0" id="Path"></path>
+            <path d="M40.44,34 L27,34 C27,34 29.88,6 40.44,2 L40.44,50" id="Path"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,241 @@
+/*------------------------------
+GLOBAL : VARIABLES
+~ variables et constantes globales
+--------------------------------*/
+
+/*RP BREAKS*/
+
+	//Horizontal breaks
+	$rb-xxxl 				: 1920px;
+	$rb-xxl 				: 1440px;
+	$rb-xl 					: 1280px;
+	$rb-md 					: 1024px;
+	$rb-sm 					: 768px;
+	$rb-xs 					: 480px;
+
+	//Vertical breaks
+	$rbh-s 					: 770px;
+
+
+/*COLOR PALETTE*/
+	
+	//Tons
+	$c-noir					: #1E1F22;
+	$c-anthracite		: #2A2A2A;
+	$c-ardoise			: #383C47;
+	$c-gris					: #E7EAEF;
+	$c-beige				: #EAE7E7;
+	$c-creme				: #EFF2F7;
+	$c-blanc				: #FDFDFF;
+
+	//Couleurs
+	$c-brun					: #B0632F;
+	$c-sienne				: #BF4300;
+	$c-ocre					: #AF2B00;
+	$c-orange				: #F56600;
+	$c-or						: #FDA200;
+	$c-jaune				: #F2DDB4;
+	$c-rouge				: #E61C06;
+
+	//Dégradés
+
+	$g-orange-lr		: linear-gradient(-85deg, #F98000 1%, $c-orange 94%);
+	$g-orange-rl		: linear-gradient(85deg, #F98000 1%, $c-orange 94%);
+	$g-red-lr				: linear-gradient(-85deg, #EE2F00 1%, $c-rouge 94%);
+
+
+/*FONT SIZES*/
+
+$f-xxs						: 0.75rem;
+$f-xs							: 0.88rem;
+$f-s							: 1.00rem;
+$f-m							: 1.13rem;
+$f-l							: 1.56rem;
+$f-xl							: 2.19rem;
+$f-xxl						: 3.06rem;
+$f-xxxl						: 4.25rem;
+
+$fz-0							: clamp(0.83rem, calc(0.50rem + 0.42vw), 0.88rem); //14
+$fz-1							: clamp(0.95rem, calc(0.63rem + 0.42vw), 1.00rem); //15
+$fz-15						: clamp(1.05rem, calc(0.75rem + 0.42vw), 1.13rem); //18
+$fz-2							: clamp(1.00rem, calc(0.91rem + 0.31vw), 1.19rem); //19
+$fz-25						: clamp(0.94rem, calc(0.78rem + 0.52vw), 1.25rem); //22
+$fz-3							: clamp(1.25rem, calc(0.94rem + 1.04vw), 1.88rem); //30
+$fz-45						:	clamp(1.00rem, calc(0.22rem + 2.60vw), 2.56rem); //41
+$fz-4							: clamp(1.75rem, calc(1.06rem + 2.29vw), 3.13rem); //50
+$fz-5							: clamp(2.19rem, calc(1.41rem + 2.60vw), 3.75rem); //60
+
+
+/*SHAPES*/
+
+.s-round--low{			border-radius: 2px}
+.s-round--med{			border-radius: 3px}
+.s-round--high{			border-radius: 5px}
+.s-round--btn{			border-radius: 60px}
+.s-round--full{			border-radius: 100%}
+.s-round--top{			border-radius: 3px 3px 0 0}
+.s-round--bot{			border-radius: 0 0 3px 3px}
+
+
+/*ELEVATIONS*/
+
+.e-low{					box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.08)}
+.e-med{					box-shadow: 0 2px 13px 0 rgba(0,0,0,0.21)}
+.e-high{				box-shadow: 0 3px 21px 2px rgba(0,0,0,0.21)}
+
+
+/*OVERLAYS*/
+.o-cl{ 					background-image: linear-gradient(37deg, #000000 8%, rgba(0,0,0,0.00) 97%);}
+.o-bl{					background-image: radial-gradient(circle at 14% 100%, #141519 0%, rgba(20,21,25,0.46) 70%, rgba(20,21,25,0.00) 141%);}
+.o-br{					background-image: radial-gradient(circle at 86% 100%, #141519 0%, rgba(20,21,25,0.46) 70%, rgba(20,21,25,0.00) 141%);}
+.o-bc{					background-image: linear-gradient(180deg, rgba(20,21,25,0.00) 42%, #141519 100%);}
+.o-bcs{					background-image: linear-gradient(180deg, rgba(20,21,25,0.00) 34%, #141519 100%);}
+.o-lr{					background-image: linear-gradient(270deg, rgba(20,21,25,0.55) 0%, rgba(20,21,25,0.00) 15%, rgba(20,21,25,0.00) 85%, rgba(20,21,25,0.55) 100%);}
+.o-c{					background-image: radial-gradient(circle at 50% 50%, rgba(20,21,25,0.55) 0%, rgba(0,0,0,0) 68%);}
+
+
+/*SIZES*/
+
+//Calcul d'espacement harmonieux avec la suite de fibonnaci
+//Première valeur à 3 en utilisant : spacer(1)
+@function spacer($n) {
+  $f: 1 2;
+
+  @for $i from 1 through $n {
+    $new: nth($f, length($f)) + nth($f, length($f) - 1);
+    $f: append($f, $new);
+  }
+
+  @return nth($f, length($f));
+}
+
+
+/* MARGIN*/
+
+.margin{
+
+	&.margin-t--1{
+		margin-top: spacer(3)+px;
+	}
+
+	&.margin-t--2{
+		margin-top: spacer(4)+px;
+	}
+
+	&.margin-t--3{
+		margin-top: spacer(5)+px;
+	}
+
+	&.margin-t--4{
+		margin-top: spacer(6)+px;
+	}
+
+	&.margin-t--5{
+		margin-top: spacer(7)+px;
+	}
+
+	&.margin-t--6{
+		margin-top: spacer(8)+px;
+	}
+
+	&.margin-t--7{
+		margin-top: spacer(9)+px;
+	}
+
+
+
+	&.margin-l--1{
+		margin-left: spacer(3)+px;
+	}
+
+	&.margin-l--2{
+		margin-left: spacer(4)+px;
+	}
+
+	&.margin-l--3{
+		margin-left: spacer(5)+px;
+	}
+
+	&.margin-l--4{
+		margin-left: spacer(6)+px;
+	}
+
+	&.margin-l--5{
+		margin-left: spacer(7)+px;
+	}
+
+	&.margin-l--6{
+		margin-left: spacer(8)+px;
+	}
+
+
+	&.margin-l--7{
+		margin-left: spacer(9)+px;
+	}
+
+
+
+
+
+	&.margin-b--1{
+		margin-bottom: spacer(3)+px;
+	}
+
+	&.margin-b--2{
+		margin-bottom: spacer(4)+px;
+	}
+
+	&.margin-b--3{
+		margin-bottom: spacer(5)+px;
+	}
+
+	&.margin-b--4{
+		margin-bottom: spacer(6)+px;
+	}
+
+	&.margin-b--5{
+		margin-bottom: spacer(7)+px;
+	}
+
+	&.margin-b--6{
+		margin-bottom: spacer(8)+px;
+	}
+
+	&.margin-b--7{
+		margin-bottom: spacer(9)+px;
+	}
+
+
+
+
+
+
+	&.margin-r--1{
+		margin-right: spacer(3)+px;
+	}
+
+	&.margin-r--2{
+		margin-right: spacer(4)+px;
+	}
+
+	&.margin-r--3{
+		margin-right: spacer(5)+px;
+	}
+
+	&.margin-r--4{
+		margin-right: spacer(6)+px;
+	}
+
+	&.margin-r--5{
+		margin-right: spacer(7)+px;
+	}
+
+	&.margin-r--6{
+		margin-right: spacer(8)+px;
+	}
+
+	&.margin-r--7{
+		margin-right: spacer(9)+px;
+	}
+
+}

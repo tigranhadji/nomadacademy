@@ -1,0 +1,57 @@
+/*------------------------------
+GLOBAL : ICONS
+~ icones et variantes de couleur
+--------------------------------*/
+
+//Utilise le svg stacking pour afficher le svg voulu avec :target
+//Prend trois valeurs
+@mixin icon($name, $color:white, $size:20px){
+	background-image: url("../assets/icons/sprite.svg#" + $name + "_" + $color);
+	background-size: $size $size;}
+
+
+//Fonction alternative utilisant l'attribut data-icon pour servir
+//la bonne icone. A complémenter avec une coloration (.ico--couleur)
+$icons:
+	"home",
+	"map",
+;
+
+@each $i in $icons {
+
+  [data-icon="#{$i}"] {
+
+  	//Icone de base blanche
+    background-image: url("../assets/icons/sprite.svg#" + $i + "_white");
+    background-repeat: no-repeat;
+
+    //Icone turquoise
+  	&.ico--blue{
+  		$iconcolor : "blue";
+  		background-image: url("../assets/icons/sprite.svg#" + $i + "_" + $iconcolor);}
+
+  	//Icone jaune
+  	&.ico--yellow{
+  		$iconcolor : "yellow";
+  		background-image: url("../assets/icons/sprite.svg#" + $i + "_" + $iconcolor);}
+
+  	//Icone blanche
+  	&.ico--white{
+  		$iconcolor : "white";
+  		background-image: url("../assets/icons/sprite.svg#" + $i + "_" + $iconcolor);}
+
+  	//Icone blanche
+  	&.ico--black{
+  		$iconcolor : "black";
+  		background-image: url("../assets/icons/sprite.svg#" + $i + "_" + $iconcolor);}
+
+  }
+
+}
+
+
+//Icones à usage dans le CSS avec classes appropriées
+
+.ico--home{				@include icon(home,yellow,100%);}
+.ico--home_white{		@include icon(home,white,100%);}
+.ico--home_blue{		@include icon(home,blue,100%);}

@@ -1,0 +1,56 @@
+/*----------------------------
+  ORGANISMS : QUOTE
+~ Citations
+------------------------------*/
+
+.c-quote{
+  width: 100%;
+  blockquote{
+    @extend .tf-quote;
+    padding: $tp-blockquote;
+  }
+
+  cite{
+    @extend .tf-quote--cite;
+  }
+  blockquote:before,
+  blockquote:after{
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url($ti-quotes);
+    background-repeat: no-repeat;
+    background-size: 20%;
+  }
+
+  blockquote:before{
+    top: -60%;
+    left: -15%;
+  }
+
+  blockquote:after{
+    transform: rotate(180deg);
+    bottom: 0%;
+    right: -25%;
+  }
+
+  &.c-quote--regular{
+    // text-align: justify;
+    ul{display: none;}
+    cite{
+      display: block;
+      margin: $tm-cite;}
+  }
+
+  &.c-quote--star{
+    ul{
+      list-style-type: none;
+      gap: 10px;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: spacer(5)+px;
+      display: flex;}
+  }
+
+}

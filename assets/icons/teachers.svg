@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard Copy</title>
+    <g id="Artboard-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="9026025_user_circle_plus_icon" transform="translate(3.000000, 3.000000)" stroke="#FFFFFF" stroke-width="4.16666277">
+            <circle id="Oval" cx="24.9999766" cy="22.916692" r="10.4166569"></circle>
+            <path d="M8.28124225,43.593756 C11.4775001,37.2981002 17.939428,33.3317511 24.9999766,33.3317511 C32.0605252,33.3317511 38.5224531,37.2981002 41.7187109,43.593756" id="Path" stroke-linecap="round" stroke-linejoin="round"></path>
+            <line x1="37.4999649" y1="6.25004095" x2="49.9999532" y2="6.25004095" id="Path" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line x1="43.749959" y1="4.68017798e-05" x2="43.749959" y2="12.5000351" id="Path" stroke-linecap="round" stroke-linejoin="round"></line>
+            <path d="M49.6874535,21.0677354 C49.8980274,22.3678617 50.0025383,23.6829574 50,25.0000234 C50,38.8071292 38.8070824,50 24.9999766,50 C11.1928708,50 0,38.8071292 0,25.0000234 C0,11.1929176 11.1928708,0 24.9999766,0 C26.3170426,-0.00253830688 27.6321383,0.10197261 28.9322646,0.312546509" id="Path" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

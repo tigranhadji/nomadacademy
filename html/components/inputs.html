@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr" prefix="og: http://ogp.me/ns#">
+<head>
+  <title>Inputs -- Components | </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+  <link rel="shortcut icon" href="../assets/appicons/favicon.svg" type="image/svg" />
+</head>
+<body style="padding: 10vh 10vw">
+
+  <h1 class="f-h--1">Inputs</h1>
+  <p style="margin-bottom: 34px;"></p>
+
+  <p style="margin-bottom: 13px;">Input simples</p>
+
+
+  <div class="c-input c-input--regular" style="margin-bottom: 8px;">
+  <input id="text" type="text" placeholder="Texte">
+  </div>
+
+  <div class="c-input c-input--regular c-input--labelin c-input--valid" style="margin-bottom: 8px;">
+    <input id="email2" type="email" value="" placeholder="&nbsp;">
+    <label for="email2">Label email valide</label>
+  </div>
+
+  <div class="c-input c-input--regular c-input--border" style="margin-bottom: 8px;">
+    <input id="email2" type="email" value="" placeholder="Email">
+  </div>
+
+
+  <div class="c-input c-input--regular c-input--labelout" style="margin-bottom: 8px;">
+    <label for="email2">Label email valide</label>
+    <input id="email2" type="email" value="" placeholder="&nbsp;">
+  </div>
+
+
+  <div class="c-input c-input--regular" style="margin-bottom: 8px;">
+    <label for="email2">Label email valide</label>
+    <input id="email2" type="email" value="" placeholder="&nbsp;">
+  </div>
+
+
+  <div class="c-input c-input--regular c-input--labelin c-input--invalid c-input--error_r" style="margin-bottom: 8px;">
+    <input id="email3" type="email" value="" placeholder="&nbsp;">
+    <label for="email3">Label email invalide</label>
+    <i>Message d'erreur</i>
+  </div>
+
+
+<br><br><br>
+
+<p style="margin-bottom: 13px;">Select</p>
+
+<div style="margin-bottom: 8px;" class="c-input c-input--select">
+  <select class="" name="">
+    <option value="">Regular</option>
+    <option value="">Option2</option>
+    <option value="">Option3</option>
+  </select>
+</div>
+
+<div style="margin-bottom: 8px;" class="c-input c-input--regular c-input--select c-input--valid">
+  <select class="" name="">
+    <option value="">Valid</option>
+    <option value="">Option2</option>
+    <option value="">Option3</option>
+  </select>
+</div>
+
+<div style="margin-bottom: 8px;" class="c-input c-input--regular c-input--select c-input--invalid">
+  <select class="" name="">
+    <option value="">Invalid</option>
+    <option value="">Option2</option>
+    <option value="">Option3</option>
+  </select>
+</div>
+
+<div style="margin-bottom: 8px;" class="c-input c-input--select c-input--dropdown">
+  <label for="">Dropdown select</label>
+  <div class="c-input--dropdown_holder">
+    <div class="c-input--dropdown_selector">Choisir une option</div>
+    <ul class="c-input--dropdown_list dropdown-display--bottom">
+      <li>Option1</li>
+      <li>Option1</li>
+      <li>Option1</li>
+      <li>Option1</li>
+      <li>Option1</li>
+      <li>Option1</li>
+    </ul>
+  </div>
+</div>
+
+<div style="margin-bottom: 8px;" class="c-input c-input--select c-input--dropdown c-input--dropdown_icon">
+  <label for="">Dropdown  avec icon</label>
+  <div class="c-input--dropdown_holder">
+    <div class="c-input--dropdown_selector">Choisir une option</div>
+    <ul class="c-input--dropdown_list dropdown-display--bottom">
+      <li>Option1</li>
+      <li>Option1</li>
+      <li>Option1</li>
+      <li>Option1</li>
+      <li>Option1</li>
+      <li>Option1</li>
+    </ul>
+  </div>
+</div>
+
+
+<br><br><br>
+<p style="margin-bottom: 13px;">Input radio</p>
+
+
+<div class="c-input c-input--radio" style="margin-bottom: 8px;">
+  <div class="">
+    <input type="radio" id="option1" value="option1">
+    <label for="option1">Option1</label>
+  </div>
+
+  <div class="">
+    <input type="radio" id="option2" value="option2">
+    <label for="option2">Option2</label>
+  </div>
+
+</div>
+
+
+<br><br><br>
+<p style="margin-bottom: 13px;">Checkbox</p>
+
+
+<div class="c-input c-input--check" style="margin-bottom: 8px;">
+    <input id="check-1" type="checkbox">
+    <label for="check-1">Label</label>
+</div>
+
+
+
+<br><br><br>
+<p style="margin-bottom: 13px;">Textarea</p>
+
+
+<div class="c-input c-input--textarea" style="margin-bottom: 8px;">
+    <label for="">Label</label>
+    <textarea  placeholder="text" name="name" rows="8" cols="80"></textarea>
+</div>
+
+<br><br><br>
+<p style="margin-bottom: 13px;">Toggles</p>
+
+
+<div class="c-input c-input--toggle">
+  <input type="checkbox" id="radio-2" name="switch-1" value="no" />
+  <label for="radio-2">Choix 2</label>
+</div>
+
+
+</body>
+</html>

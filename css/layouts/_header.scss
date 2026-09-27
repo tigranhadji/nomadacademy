@@ -1,0 +1,60 @@
+/*----------------------------
+Layouts : HEADER
+~ Header mobile et desktop
+------------------------------*/
+.c-header{
+  display: flex;
+  align-items: center;
+  gap: 68px;
+  min-width: 100%;
+
+  a{
+    text-decoration: none;
+    @extend .tf-menu;
+  }
+
+  .c-header--logo{
+    display: block;
+    width: 100px;
+  }
+
+  .c-header--list{
+    list-style-type: none;
+    display: flex;
+    gap: 67px;
+    .active{
+        a{color: $tc-default;}
+    }
+  }
+
+  &.c-header--buttons{
+    .c-header--actions{
+      margin-left: auto;
+    }
+  }
+
+  &.c-header--icon-center{
+    justify-content: center;
+    .c-header--list{
+      align-items: center;
+      .c-header--list_item-logo{
+        background-image: url($ti-logo);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-width: 100px;
+        min-height: 100px;
+      }
+    }
+  }
+
+  &.c-header--menu-center{
+    justify-content: center;
+    .c-header--logo{
+      position: absolute;
+      left: 0;
+    }
+  }
+
+
+}

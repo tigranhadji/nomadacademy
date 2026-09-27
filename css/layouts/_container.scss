@@ -1,0 +1,111 @@
+/*----------------------------
+LAYOUTS : CONTAINER
+~ Blocs de contenu
+------------------------------*/
+
+
+.l-container{
+	//Variables de marge et padding pour containers
+	--container-padding: #{spacer(5)+px};
+	--container-margin: #{spacer(7)+px};
+	--container-negpadding: -#{spacer(5)+px};
+	--container-negmargin: -#{spacer(7)+px};
+
+	padding: var(--container-padding);
+	background-color: $tc-background--alt;
+	@extend .s-round--high;
+	flex-grow: 1;
+	margin-left: var(--container-margin);
+	
+	//Marge automatique entre éléments du container
+	& > * ~ *{margin-top: var(--container-padding)}
+	
+	header{
+		width: calc(100% + var(--container-padding) * 2);
+		background-color: $tc-background;
+		margin-top: var(--container-negpadding);
+		margin-left: var(--container-negpadding);
+		margin-bottom: var(--container-padding);
+		padding-bottom: var(--container-padding);
+		
+		display: flex;
+		justify-content: space-between;
+	
+		h1{
+			@extend .f-h--3;
+			font-weight: 900}	
+	}
+	
+	&.l-container--pad{
+		padding: 
+			calc(var(--container-padding) * 2.4)
+			calc(var(--container-padding) * 1.4)
+			calc(var(--container-padding) * 2.4)
+			calc(var(--container-padding) * 2.4);
+	}
+
+	&.l-container--full{
+		flex-basis: 100%;}
+
+	&.l-container--half{
+		flex-grow: 0;
+		flex-basis: calc(50% - var(--container-margin) / 2);}
+
+	&.l-container--third{
+		flex-grow: 0;
+		flex-basis: calc((100% / 3) - (var(--container-margin) * 2) / 3);}
+
+	&.l-container--quarter{
+		flex-grow: 0;
+		flex-basis: calc((100% / 4) - (var(--container-margin) * 3) / 4);}
+
+	&.l-container--full,
+	&.l-container--rowstart{margin-left: 0;}
+
+
+	@media screen and (max-width: $rb-xxl){
+
+		--container-padding: #{spacer(4)+px};
+		--container-margin: #{spacer(6)+px};
+		--container-negpadding: -#{spacer(4)+px};
+		--container-negmargin: -#{spacer(6)+px};
+	    
+	}
+
+	@media screen and (max-width: $rb-xl){
+
+		--container-padding: #{spacer(5)+px};
+		--container-margin: #{spacer(7)+px};
+		--container-negpadding: -#{spacer(5)+px};
+		--container-negmargin: -#{spacer(7)+px};
+
+	&.l-container--half{
+		flex-basis: 100%;
+		width: 100%;}
+
+	&.l-container--third{
+		flex-basis: calc(50% - var(--container-margin) / 2);}
+
+	&.l-container--half + .l-container--half{
+		margin-left: 0;}
+	    
+	}
+
+	@media screen and (max-width: $rb-md){
+
+		&.l-container--pad{padding: var(--container-padding);}
+
+	}
+
+	@media screen and (max-width: $rb-sm){
+		padding: 0 !important;
+		background-color: transparent;
+		
+		header{
+			width: 100%;
+			margin: 0;
+			padding: 0;}
+	}
+		
+	
+}

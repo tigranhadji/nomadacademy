@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group" transform="translate(4.000000, 14.000000)" stroke="#FDFFFC" stroke-width="3.62318833">
+            <line x1="-3.50509213" y1="9.94874288" x2="25.5050919" y2="12.0512569" id="Path" transform="translate(11.000000, 11.000000) rotate(-315.000000) translate(-11.000000, -11.000000) "></line>
+            <line x1="29.6142005" y1="-3.08359318" x2="32.5597125" y2="25.0835932" id="Path" transform="translate(31.086957, 11.000000) rotate(-315.000000) translate(-31.086957, -11.000000) "></line>
+        </g>
+    </g>
+</svg>

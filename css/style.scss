@@ -1,0 +1,85 @@
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SCSS CODE BASE -- DATE : 14/06/2022 -- AUTHOR : OLIVER MICHAS -- © PATRIVIA
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+╔═╗╦  ╔═╗╔╗ ╔═╗╦
+║ ╦║  ║ ║╠╩╗╠═╣║
+╚═╝╩═╝╚═╝╚═╝╩ ╩╩═╝
+////////////////////////////*/
+
+@import "global/normalize"; 	/* > rendu consistant sur navigateurs*/
+@import "global/variables"; 	/* > variables et constantes globales*/
+@import "global/icons";         /* > icones et variantes*/
+@import "global/type"; 			/* > polices et typographie*/
+@import "global/helpers";       /* > classes utilitaires*/
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+╔╦╗╦ ╦╔═╗╔╦╗╔═╗╔═╗
+ ║ ╠═╣║╣ ║║║║╣ ╚═╗
+ ╩ ╩ ╩╚═╝╩ ╩╚═╝╚═╝
+////////////////////////////*/
+
+@import "themes/nomad--var";         /* > thème back-office propriétaires*/
+@import "themes/nomad--css";         /* > thème back-office propriétaires*/
+// @import "themes/aerostack";         /* > thème back-office propriétaires*/
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+╔═╗╔═╗╔╦╗╔═╗╔═╗╔╗╔╔═╗╔╗╔╔╦╗╔═╗
+║  ║ ║║║║╠═╝║ ║║║║║╣ ║║║ ║ ╚═╗
+╚═╝╚═╝╩ ╩╩  ╚═╝╝╚╝╚═╝╝╚╝ ╩ ╚═╝
+////////////////////////////*/
+
+@import "components/breadcrumb";        /* > fil d'ariane*/
+@import "components/buttons"; 	        /* > boutons*/
+@import "components/cards";             /* > cartes (lieux/activités)*/
+@import "components/inputs";            /* > inputs*/
+@import "components/nav";               /* > navigation*/
+@import "components/search";            /* > recherche*/
+@import "components/checklist";         /* > liste à coches*/
+@import "components/sliders";           /* > sliders */
+@import "components/quote";             /* > Quotes */
+@import "components/textlist";          /* > Textlists */
+
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+╔═╗╦═╗╔═╗╔═╗╔╗╔╦╔═╗╔╦╗╔═╗
+║ ║╠╦╝║ ╦╠═╣║║║║╚═╗║║║╚═╗
+╚═╝╩╚═╚═╝╩ ╩╝╚╝╩╚═╝╩ ╩╚═╝
+////////////////////////////*/
+
+@import "organisms/grids";              /* > grids */
+@import "organisms/lists"; 	            /* > lists */
+@import "organisms/navigations";        /* > navigations*/
+@import "organisms/searchbar";          /* > searchbar */
+@import "organisms/reviews";            /* > reviews */
+@import "organisms/cards";              /* > cards */
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+╦  ╔═╗╦ ╦╔═╗╦ ╦╔╦╗╔═╗
+║  ╠═╣╚╦╝║ ║║ ║ ║ ╚═╗
+╩═╝╩ ╩ ╩ ╚═╝╚═╝ ╩ ╚═╝
+////////////////////////////*/
+
+@import "layouts/flex";          /* > Rangées et colonnes*/
+@import "layouts/forms";                /* > Formulaires*/
+@import "layouts/header";               /* > header*/
+@import "layouts/footer";               /* > footer*/
+@import "layouts/sidebyside";           /* > affichage côte-à-côte*/
+@import "layouts/modals";               /* > Modales*/
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+╔╦╗╔═╗╔╦╗╔═╗╦  ╔═╗╔╦╗╔═╗╔═╗
+ ║ ║╣ ║║║╠═╝║  ╠═╣ ║ ║╣ ╚═╗
+ ╩ ╚═╝╩ ╩╩  ╩═╝╩ ╩ ╩ ╚═╝╚═╝
+////////////////////////////*/
+
+@import "templates/front";              /* > Front */

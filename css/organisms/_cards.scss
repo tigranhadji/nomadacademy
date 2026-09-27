@@ -1,0 +1,156 @@
+/*----------------------------
+  ORGANISMS : CARDS
+~ Différentes cartes
+------------------------------*/
+.c-card{
+  // margin-right: 10px;
+
+  .c-card--text{
+    display: flex;
+    flex-direction: column;
+    h2,small,p{
+      display: block;
+    }
+    p{
+      @extend .tf-card--text;
+    }
+    h2{
+      @extend .tf-card--title;
+    }
+  }
+
+  & > *{display: block;}
+
+  picture{
+    img{object-fit: cover}
+  }
+
+
+
+  &.c-card--text-in{
+    .c-card--text{
+      position: absolute;
+      left: 5%;
+      color: $tc-foreground;
+      bottom: 5%;
+      display: flex;
+      flex-direction: column;}
+  }
+
+  &.c-card--text-out_c{
+    .c-card--text{
+      align-items: center;
+    }
+  }
+
+
+  &.c-card--text-out_r{
+    .c-card--text{
+      align-items: flex-end;
+    }
+  }
+
+  &.c-card--picture-icon{
+    .c-card--visuel:before,
+    .c-card--visuel:after{
+      content: " ";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -17px;
+      margin-top: -17px;
+      height: 50%;
+
+    }
+
+    .c-card--visuel:hover:before{
+      height: 34px;
+      width: 34px;
+      border-radius: 100%;
+      z-index: 5;
+      background-color: red;
+    }
+
+    .c-card--visuel:hover:after{
+      height: 34px;
+      width: 34px;
+      background-image: url(../assets/icons/icon--look.png);
+      background-position: center;
+      background-size: 50%;
+      background-repeat: no-repeat;
+      z-index: 6;
+    }
+  }
+
+  &.c-card--3text{
+
+    .c-card--text{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: row;
+      small{
+        order: 3;
+      }
+
+      strong,p{
+        width: 50%;
+      }
+
+      p{text-align: right;}
+    }
+  }
+
+  &.c-card--1btn{
+    .c-card--cta{
+      a{width: 100%;}
+    }
+  }
+
+  &.c-card--2btn{
+
+    .c-card--cta{
+      display: flex;
+      a{width: 50%;}
+    }
+  }
+
+  &.c-card--right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .c-card--visuel{
+      margin-right: spacer(6)+px;
+      width: 30%;
+    }
+
+    .c-card--content{
+      width: 50%;
+      .c-card--text{
+        margin-bottom: spacer(7)+px;
+      }
+    }
+  }
+
+  &.c-card--textcenter{
+    text-align: center;
+    .c-card--content{
+      .c-card--text{
+      }
+    }
+  }
+
+
+  &.c-card--fullH{
+    .c-card--visuel{
+      height: 100%;
+        picture{
+          height: 100%;
+          img{min-height: 100%;}
+        }
+    }
+  }
+
+
+}
